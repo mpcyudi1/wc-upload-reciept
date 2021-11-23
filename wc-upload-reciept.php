@@ -369,7 +369,7 @@ if (!class_exists("Pepro_Upload_Receipt_WooCommerce")) {
           "select_file"   => _x("Select a file first.", "js-translate", $this->td),
         ));
         wp_enqueue_script("upload-receipt.js");
-        echo "<h2 class='woocommerce-order-details__title upload_receipt'>".__("Upload receipt", $this->td)."</h2>";
+        echo "<h2 class='woocommerce-order-details__title upload_receipt'>".__("Unggah Bukti Transfer", $this->td)."</h2>";
         ?>
           <table class="woocommerce-table woocommerce-table--upload-receipt upload_receipt" style="width: 100%;background: #f5f5f5;position: relative;">
             <tbody>
@@ -396,12 +396,12 @@ if (!class_exists("Pepro_Upload_Receipt_WooCommerce")) {
               if ("approved" != $status && "pending" != $status) {
                 ?>
                 <tr>
-                  <th scope="row"><?=__("Upload Receipt: ", $this->td); ?></th>
+                  <th scope="row"><?=__("Bukti Tansfer ", $this->td); ?></th>
                   <td class="receipt-img-upload">
                     <form id="uploadreceiptfileimage" enctype="multipart/form-data"><?php wp_nonce_field($this->db_slug, 'uniqnonce'); ?>
                       <div style="display: inline-block;">
                         <input type="file" id="receipt-file" name="upload" required accept="<?=implode(",", $this->_allowed_file_types_array());?>" style="width: auto;" />
-                        <button class="start-upload button" type="button"><?=__("Upload Receipt", $this->td); ?></button>
+                        <button class="start-upload button" type="button"><?=__("Unggah", $this->td); ?></button>
                         <div class="receipt_uploading-loader">
                           <div class="loadingio-spinner-disk-mnv03m2b0h"><div class="ldio-0r9ic9wjpqu"><div><div></div><div></div></div></div></div>
                         </div>
